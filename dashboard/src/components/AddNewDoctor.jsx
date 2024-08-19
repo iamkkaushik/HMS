@@ -58,7 +58,7 @@ const AddNewDoctor = () => {
       formData.append("doctorDepartment", doctorDepartment);
       formData.append("docAvatar", docAvatar);
       await axios
-        .post("http://localhost:4000/api/v1/user/doctor/addnew", formData, {
+        .post("http://localhost:3000/api/v1/user/doctor/addnew", formData, {
           withCredentials: true,
           headers: { "Content-Type": "multipart/form-data" },
         })
@@ -75,6 +75,29 @@ const AddNewDoctor = () => {
           setGender("");
           setPassword("");
         });
+      // await axios
+      // .post(
+      //   "http://localhost:3000/api/v1/user/doctor/addnew",
+      //   { firstName, lastName, email, phone, nic, dob, gender, password,doctorDepartment,docAvatar },
+      //   {
+      //     withCredentials: true,
+      //     headers: { "Content-Type": "application/json" },
+      //   }
+      // )
+      // .then((res) => {
+      //   toast.success(res.data.message);
+      //   setIsAuthenticated(true);
+      //   navigateTo("/");
+      //   setFirstName("");
+      //   setLastName("");
+      //   setEmail("");
+      //   setPhone("");
+      //   setNic("");
+      //   setDob("");
+      //   setGender("");
+      //   setPassword("");
+      // });
+
     } catch (error) {
       toast.error(error.response.data.message);
     }

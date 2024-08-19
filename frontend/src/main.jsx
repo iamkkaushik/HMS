@@ -29,3 +29,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <AppWrapper />
   </React.StrictMode>
 );
+
+// root.render(
+// <React.StrictMode>
+//   <AppWrapper />
+// </React.StrictMode>
+// );
