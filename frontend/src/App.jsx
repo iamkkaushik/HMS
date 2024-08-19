@@ -20,7 +20,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/v1/user/patient/me",
+          "hms-delta-sepia.vercel.app/api/v1/user/patient/me",
           {
             withCredentials: true,
           }
