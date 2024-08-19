@@ -18,7 +18,7 @@ const Login = () => {
     try {
       await axios
         .post(
-          "hms-delta-sepia.vercel.app/api/v1/user/login",
+          "https://hms-delta-sepia.vercel.app/api/v1/user/login",
           { email, password, confirmPassword, role: "Patient" },
           {
             withCredentials: true,
