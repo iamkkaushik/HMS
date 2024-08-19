@@ -13,8 +13,8 @@ const app = express();
 
 app.use(
   cors({
-    // origin: [process.env.FRONTEND_URL1,process.env.FRONTEND_URL2],
-    origin: [],
+    origin: [process.env.FRONTEND_URL1,process.env.FRONTEND_URL2],
+    // origin: [],
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
