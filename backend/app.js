@@ -13,8 +13,8 @@ const app = express();
 
 app.use(
   cors({
-    // origin: [process.env.FRONTEND_URL1,process.env.FRONTEND_URL2],
-    origin: ["https://hms-cp1r.vercel.app","https://hms-cp1r-8q9ivwffm-kaushiks-projects-199413ab.vercel.app"],
+    origin: [process.env.FRONTEND_URL1,process.env.FRONTEND_URL2],
+    // origin: ["https://hms-cp1r.vercel.app","https://hms-cp1r-8q9ivwffm-kaushiks-projects-199413ab.vercel.app"],
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
