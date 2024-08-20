@@ -8,13 +8,12 @@ import { errorMiddleware } from "./middlewares/error.js";
 import messageRouter from "./router/messageRouter.js";
 import userRouter from "./router/userRouter.js";
 import appointmentRouter from "./router/appointmentRouter.js";
-config();
-const app = express();
 
+const app = express();
+config();
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL1,process.env.FRONTEND_URL2],
-    // origin: ["https://hms-cp1r.vercel.app","https://hms-cp1r-8q9ivwffm-kaushiks-projects-199413ab.vercel.app"],
+    origin: ["https://hmshms.netlify.app"],
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
@@ -27,7 +26,8 @@ app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
+// origin: [process.env.FRONTEND_URL1,process.env.FRONTEND_URL2],
+// origin: ["https://hms-cp1r.vercel.app","https://hms-cp1r-8q9ivwffm-kaushiks-projects-199413ab.vercel.app"],
 
 
 
