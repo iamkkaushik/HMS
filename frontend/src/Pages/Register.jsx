@@ -23,7 +23,7 @@ const Register = () => {
     try {
       await axios
         .post(
-          "https://hms-delta-sepia.vercel.app/api/v1/user/patient/register",
+          "https://hms-1-bu8j.onrender.com/api/v1/user/patient/register",
           { firstName, lastName, email, phone, nic, dob, gender, password },
           {
             withCredentials: true,
