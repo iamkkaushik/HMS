@@ -13,7 +13,7 @@ const app = express();
 config();
 app.use(
   cors({
-    origin: ["https://hmshms.netlify.app"],
+    origin: [process.env.FRONTEND_URL1],
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
