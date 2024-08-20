@@ -14,7 +14,7 @@ const MessageForm = () => {
     try {
       await axios
         .post(
-          "hms-delta-sepia.vercel.app/api/v1/message/send",
+          "https://hms-delta-sepia.vercel.app/api/v1/message/send",
           { firstName, lastName, email, phone, message },
           {
             withCredentials: true,
