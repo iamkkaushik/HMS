@@ -8,9 +8,9 @@ import { errorMiddleware } from "./middlewares/error.js";
 import messageRouter from "./router/messageRouter.js";
 import userRouter from "./router/userRouter.js";
 import appointmentRouter from "./router/appointmentRouter.js";
-
+config({ path: "./config/config.env" });
 const app = express();
-config();
+
 app.use(
   cors({
     origin: [process.env.FRONTEND_URL1],
@@ -19,17 +19,10 @@ app.use(
   })
 );
 
-// app.use(cors());
-
-//config({ path: "./config.env" });
+app.options("*", cors());
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-// origin: [process.env.FRONTEND_URL1,process.env.FRONTEND_URL2],
-// origin: ["https://hms-cp1r.vercel.app","https://hms-cp1r-8q9ivwffm-kaushiks-projects-199413ab.vercel.app"],
-
-
 
 app.use(
   fileUpload({
@@ -40,8 +33,6 @@ app.use(
 app.use("/api/v1/message", messageRouter);
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/appointment", appointmentRouter);
-
-
 
 dbConnection();
     // .then(() => {
